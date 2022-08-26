@@ -1,0 +1,55 @@
+*{
+    text-align: justify;
+}
+h2{
+    color: red;
+}/*least specific in ordering*/
+
+#about-me{
+    color:blue;
+}
+.subtitle{
+    color: blue;
+}
+#services{
+    color:green;
+}/*most specific in CSS, but inline styling is most specific, specificity wise*/
+
+li:nth-child(2){
+    color:red;/*So every second element in new list, so each list's second element will be styled by this selector. Not every other element, but every second element in different lists*/
+}
+
+/* #link:link{
+    color:red;
+    font-weight: bold;
+}
+#link:visited{
+    color:blue;
+} */
+textarea ~ button {
+    color:purple;
+}/*They have to be under the same parent for the ~ selector to work*/
+ul > li{
+    color: blue;
+}
+/*  HOw to select an image*/
+img[src*="img"]{ /*Somewhere the source contains img in the path*/
+    border: 20px solid black;
+}
+img[src^="https"]{/*The source of the image starts with */
+    border: 20px solid blue;
+}
+#about-us-image{
+    height: 50vh;
+}
+#service-image{
+    width: 500px;
+    height:500px;
+    color: rgb(200, 148, 30);
+    /*background: radial-gradient(red, blue, green);we can actually add percentages to it likes this */
+    background: radial-gradient(circle, red 20%,blue 55%, green 72%);
+}
+.link{
+    text-decoration: underline;
+    text-transform: capitalize;
+}
